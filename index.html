@@ -1,5 +1,51 @@
+<!DOCTYPE html>
 <html>
+<head>
+	<title>cadet</title>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<script type="text/javascript" src="js/jquery-1.11.2.min.js" canvas="cadet"></script>
+	<script type="text/javascript" src="js/paper-full.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/paperscript" src="js/cadet.js" canvas="cadet"></script>
+</head>
 <body>
-it's here
+	<header class="menu">
+		<span>CADET</span>
+	</header>
+	<section id="cadet-container" class="cadet-container cf">
+		<div id="main-toolbar" class="toolbar">
+			<div class="tool-group">
+				<div id="select-tool" class="tool-btn tooltips" title="Select: V"><span>Select&#58; V</span></div>
+				<div id="duplicate-tool" class="tool-btn tooltips" title="Duplicate Selected: D"><span>Duplicate Selected&#58; D</span></div>
+			</div>
+			<div class="tool-group">
+				<div id="circle-tool" class="tool-btn tooltips" title="Draw Circle: C"><span>Draw Circle&#58; C</span></div>
+				<div id="rectangle-tool" class="tool-btn tooltips" title="Draw Rectangle: T"><span>Draw Rectangle&#58; T</span></div>
+			</div>
+			<div class="tool-group">
+				<div id="rotate-tool" class="tool-btn tooltips" title="Rotate Selected: R"><span>Rotate Selected&#58; R</span></div>
+				<div id="scale-tool" class="tool-btn tooltips" title="Scale Selected: S"><span>Scale Selected&#58; S</span></div>
+			</div>
+			<div class="tool-group immediate">
+				<div id="union-tool" class="tool-btn tooltips" title="Union Selected: U"><span>Union Selected&#58; U</span></div>
+				<div id="intersect-tool" class="tool-btn tooltips" title="Intersect Selected: I"><span>Intersect Selected&#58; I</span></div>
+				<div id="difference-tool" class="tool-btn tooltips" title="Difference Selected: O"><span>Difference Selected&#58; O</span></div>
+				<div id="hull-tool" class="tool-btn tooltips" title="Hull Selected: H"><span>Hull Selected&#58; H</span></div>
+			</div>
+			<div class="tool-group immediate">
+				<div id="delete-tool" class="tool-btn tooltips" title="Delete Selected: Del"><span>Delete Selected&#58; Del</span></div>
+			</div>
+			<div class="tool-group immediate">
+				<div id="save-tool" class="tool-btn tooltips" title="Save Project"><span>Save Project</span></div>
+				<div id="load-tool" class="tool-btn tooltips" title="Load Project"><span>Load Project</span></div>
+			</div>
+		</div>
+		<div id="render-view">
+			<canvas id="cadet" resize="true"></canvas>
+		</div>
+		<!-- <div id="properties-tray" class="tray">
+		</div> -->
+	</section>
+	
 </body>
-</hmtl>
+</html>

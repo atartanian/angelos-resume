@@ -1,0 +1,227 @@
+body {
+	padding: 0;
+	margin: 0;
+	font-family: sans-serif;
+	width: 100%;
+}
+
+.menu {
+	box-sizing: border-box;
+	text-align: center;
+	font-size: 20px;
+	height: 28px;
+	line-height: 30px;
+	background-color: #555;
+	color: #fff;
+	border-bottom: 2px solid #f55;
+	box-shadow: 0 1px 8px #ccc;
+	z-index: 99;
+}
+ 
+.menu span{
+	line-height: 20px;
+}
+
+.cadet-container {
+	height: calc(100vh - 30px);
+	overflow: hidden;
+}
+
+.toolbar {
+	float: left;
+	box-sizing: border-box;
+	padding: 4px;
+	background-color: #999;
+	height:  calc(100vh - 30px);
+	box-shadow: 1px 0 4px #ccc;
+}
+
+.tool-group + .tool-group {
+	border-top: 2px solid #555;
+	margin-top: 8px;
+	padding-top: 8px;
+}
+
+.immediate .tool-btn {
+	border: 1px solid red;
+}
+
+.tool-btn {
+	box-sizing: border-box;
+	padding: 4px;
+	width: 26px;
+	height: 26px;
+	background-color: white;
+	border-radius: 4px;
+	transition: background-color 0.2s;
+	transition-timing-function: ease;
+	position: relative;
+}
+
+.tool-btn:hover {
+	background-color: #f99;
+}
+
+.tool-btn.active {
+	background-color: #f55;
+}
+
+.tool-btn + .tool-btn {
+	margin-top: 5px;
+}
+
+#select-tool {
+	background-image: url("../img/cursor_arrow.png");
+	background-repeat: no-repeat;
+	background-position: 5px;
+}
+
+#circle-tool {
+	background-image: url("../img/circle.png");
+	background-repeat: no-repeat;
+	background-position: 5px;
+}
+
+#rectangle-tool {
+	background-image: url("../img/square.png");
+	background-repeat: no-repeat;
+	background-position: 5px;
+}
+
+#union-tool {
+	background-image: url("../img/union.png");
+	background-repeat: no-repeat;
+	background-position: 5px;
+}
+
+#intersect-tool {
+	background-image: url("../img/intersect.png");
+	background-repeat: no-repeat;
+	background-position: 5px;
+}
+
+#difference-tool {
+	background-image: url("../img/difference.png");
+	background-repeat: no-repeat;
+	background-position: 5px;
+}
+
+#duplicate-tool {
+	background-image: url("../img/duplicate.png");
+	background-repeat: no-repeat;
+	background-position: 5px;
+}
+
+#rotate-tool {
+	background-image: url("../img/rotate.png");
+	background-repeat: no-repeat;
+	background-position: 5px;
+}
+
+#scale-tool {
+	background-image: url("../img/scale.png");
+	background-repeat: no-repeat;
+	background-position: 5px;
+}
+
+#hull-tool {
+	background-image: url("../img/hull.png");
+	background-repeat: no-repeat;
+	background-position: 5px;
+}
+
+#delete-tool {
+	background-image: url("../img/delete.png");
+	background-repeat: no-repeat;
+	background-position: 5px;
+}
+
+#save-tool {
+	background-image: url("../img/save.png");
+	background-repeat: no-repeat;
+	background-position: 5px;
+}
+
+#load-tool {
+	background-image: url("../img/load.png");
+	background-repeat: no-repeat;
+	background-position: 5px;
+}
+
+#render-view {
+	float: left;
+	width: calc(100% - 34px);
+	height:  100%;
+}
+
+#cadet {
+	width: calc(100% - 34px);
+	height: 100%;
+}
+
+.cursor-cross {
+	cursor: crosshair;
+}
+
+.cursor-move {
+	cursor: move;
+}
+
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
+
+
+div.tooltips span {
+  position: absolute;
+  color: #FFFFFF;
+  background: #333333;
+  height: 27px;
+  line-height: 27px;
+  text-align: center;
+  visibility: hidden;
+  border-radius: 6px;
+}
+div.tooltips span:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -6px;
+  width: 0; height: 0;
+  border-right: 6px solid #333333;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+}
+div:hover.tooltips span {
+  visibility: visible;
+  opacity: 0.8;
+  left: 100%;
+  top: 50%;
+  margin-top: -13.5px;
+  margin-left: 15px;
+  z-index: 999;
+}
